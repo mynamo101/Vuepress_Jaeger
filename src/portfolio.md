@@ -1,6 +1,6 @@
 ---
 home: true
-portfolio: true
+portfolio: false
 title: Portfolio Home
 icon: house
 name: Conan Edogawa
