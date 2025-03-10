@@ -9,7 +9,7 @@ config:
     hero:
       name: Sound Jaeger 聲岳設計
       tagline: 您的專業聲音顧問
-      text:快速瞭解關於聲音設計的一切
+      text: 讓您在學習聲音的知識上不再困惑
       actions:
         -
           theme: brand
