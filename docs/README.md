@@ -7,8 +7,8 @@ config:
     full: true
     background: tint-plate
     hero:
-      name: Sound Jaeger 聲岳設計
-      tagline: 您的專業聲音顧問
+      name: Sound Jaeger
+      tagline: 聲岳設計
       text: 讓您在學習聲音的知識上不再困惑
       actions:
         -
@@ -17,6 +17,6 @@ config:
           link: /blog/
         -
           theme: alt
-          text: Github →
-          link: https://github.com/pengzhanbo/vuepress-theme-plume
+          text: 我們的官網 →
+          link: https://soundjaeger.com
 ---
