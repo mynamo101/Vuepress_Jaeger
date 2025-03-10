@@ -62,7 +62,7 @@ config:
     type: image-text
     title: 功能
     description: 内置丰富的功能，满足网站一般需求。
-    image: /images/plume-1.svg
+    image: /images/Image_01.png
     list:
       -
         title: 文章信息
