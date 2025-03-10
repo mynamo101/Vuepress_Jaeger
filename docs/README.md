@@ -24,7 +24,7 @@ config:
     features:
       -
         title: 沉浸式設計
-        icon: twemoji:🎧
+        icon: 🎧
         details: 适配移动设备，PC，平板
       -
         title: 博客 & 文档
