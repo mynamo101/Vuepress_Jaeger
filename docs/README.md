@@ -23,8 +23,8 @@ config:
     type: features
     features:
       -
-        title: 响应式布局
-        icon: twemoji:laptop-computer
+        title: 沉浸式設計
+        icon: twemoji:🎧
         details: 适配移动设备，PC，平板
       -
         title: 博客 & 文档
@@ -86,7 +86,7 @@ config:
     type: text-image
     title: 博客
     description: 主题默认支持博客，生成你的个人博客。
-    image: /images/plume-2.svg
+    image: /images/Image_01.png
     list:
       -
         title: 文章列表
