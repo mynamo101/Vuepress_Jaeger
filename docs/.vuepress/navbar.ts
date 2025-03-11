@@ -7,7 +7,7 @@ export const zhNavbar = defineNavbarConfig([
   // { text: '归档', link: '/blog/archives/' },
   {
     text: '聲音引擎',
-    items: [{text: 'FMOD', link: '/notes/zh/Guide/FMOD/intro/什麽是FMOD.md' }],
+    items: [{text: 'FMOD', link: '/notes/zh/Guide/FMOD/1.在開始前/什麽是FMOD.md' }],
     activeMatch: '^/FMOD/',
   }
 ])
