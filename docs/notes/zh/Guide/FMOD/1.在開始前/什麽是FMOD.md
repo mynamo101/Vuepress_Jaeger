@@ -2,7 +2,7 @@
 title: 什麽是FMOD
 icon: mdi:tooltip-text-outline
 createTime: 2024/03/04 11:06:24
-permalink: /FMOD/intro/
+permalink: /zh/Guide/FMOD/intro/
 tags:
   - 指南
   - 快速开始
