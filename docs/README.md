@@ -24,7 +24,7 @@ config:
     features:
       -
         title: 服務說明
-        icon: 🎧
+        icon: 📢
         details: 查看聲岳的服務說明和客戶中心使用方式。
       -
         title: 教學指南
@@ -39,9 +39,13 @@ config:
         icon: 🎧
         details: 我們提供不同的平臺格式的聲音輸出，讓您輕鬆駕馭多種使用場合。
       -
-        title: 安全驗證
-        icon: twemoji:cityscape
-        details: 支持 浅色/深色 主题，包括代码高亮
+        title: 跨領域支持
+        icon: 📽️
+        details: 為影視、遊戲、廣告、VR/AR不同領域提供聲音解決的方案。 
+      -
+        title: 客戶中心
+        icon: ⚙️
+        details: 一站式管理您的訂單和需求檔案，輕鬆掌握您的委託需求。
   -
     type: image-text
     title: 功能
