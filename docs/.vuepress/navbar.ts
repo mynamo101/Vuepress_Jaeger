@@ -11,7 +11,7 @@ export const zhNavbar = defineNavbarConfig([
   },
   {
     text: '聲音引擎',
-    items: [{text: 'FMOD', link: '/notes/Guide/FMOD' }]
+    items: [{text: 'FMOD', link: '/notes/Guide/FMOD/README.md' }]
   }
 ])
 
