@@ -199,7 +199,6 @@ export default defineUserConfig({
      */
     // encrypt: {},
 
-    notes
 
   }),
 })
