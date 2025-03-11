@@ -3,8 +3,8 @@ import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
 /* =================== locale: zh-CN ======================= */
 
 const zh_FMOD = defineNoteConfig({
-  dir: 'FMOD',
-  link: '/FMOD/',
+  dir: 'Guide',
+  link: '/Guide/FMOD/',
   sidebar: ['auto'],
 })
 
