@@ -54,7 +54,8 @@ export default defineUserConfig({
       categories: true, // 是否启用分类页
       postCover: 'right', // 文章封面位置
       pagination: 15, // 每页显示文章数量
-      include: ['blog/**/.md'],
+      sidebar: false,
+      // include: ['blog/**/.md'],
     },
 
     /* 博客文章页面链接前缀 */
