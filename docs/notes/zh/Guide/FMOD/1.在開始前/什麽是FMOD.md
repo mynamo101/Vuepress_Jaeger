@@ -1,3 +1,13 @@
+---
+title: 什麽是FMOD
+icon: mdi:tooltip-text-outline
+createTime: 2024/03/04 11:06:24
+permalink: /FMOD/intro/
+tags:
+  - 指南
+  - 快速开始
+---
+
 ## Lesson-1
 
 npmTo 容器用于将 npm 命令行转换为 `pnpm / yarn / deno / bun` 的命令行，并它们作为 代码块组呈现在页面。

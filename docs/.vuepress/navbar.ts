@@ -1,5 +1,5 @@
 import { defineNavbarConfig } from 'vuepress-theme-plume'
-  
+
 export const zhNavbar = defineNavbarConfig([
   { text: '首页', link: '/' },
   { text: '博客', link: '/blog/' },
@@ -7,7 +7,7 @@ export const zhNavbar = defineNavbarConfig([
   // { text: '归档', link: '/blog/archives/' },
   {
     text: '聲音引擎',
-    items: [{text: 'FMOD', link: '/notes/zh/Guide/FMOD/' }]
+    items: [{text: 'FMOD', link: '/notes/zh/Guide/FMOD/intro/' }]
   }
 ])
 
