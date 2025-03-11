@@ -2,8 +2,6 @@
 title: 什麽是FMOD
 author: pengzhanbo
 icon: mdi:tooltip-text-outline
-createTime: 2024/03/04 11:06:24
-permalink: /FMOD/intro/
 tags:
   - 指南
   - 快速开始
