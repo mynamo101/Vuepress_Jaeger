@@ -3,7 +3,7 @@ import { defineNotesConfig } from 'vuepress-theme-plume'
 import { Guide } from './Guide'
 
 export const zhNotes = defineNotesConfig({
-  dir: 'notes',
+  dir: 'notes/zh/',
   link: '/',
   notes: [
     Guide,
