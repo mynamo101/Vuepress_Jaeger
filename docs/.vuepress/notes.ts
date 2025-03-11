@@ -3,9 +3,9 @@ import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
 /* =================== locale: zh-CN ======================= */
 
 const zhDemoNote = defineNoteConfig({
-  dir: 'demo',
-  link: '/demo',
-  sidebar: ['', 'foo', 'bar'],
+  dir: 'Guide',
+  link: '/Guide',
+  sidebar: ['auto'],
 })
 
 export const zhNotes = defineNotesConfig({
