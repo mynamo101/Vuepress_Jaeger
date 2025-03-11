@@ -1,7 +1,7 @@
 import { defineNoteConfig } from 'vuepress-theme-plume'
 
 export const FMODGuide = defineNoteConfig({
-  dir: 'Guide/FMOD',
+  dir: '/zh/Guide/FMOD',
   link: '/FMOD/',
   sidebar:'auto',
 })
