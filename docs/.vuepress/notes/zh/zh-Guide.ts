@@ -2,7 +2,7 @@ import { defineNoteConfig } from 'vuepress-theme-plume'
 
 export const zhGuide = defineNoteConfig({
   dir: 'zh/Guide',
-  link: '/FMOD/',
+  link: '/Guide/',
   sidebar: [
     {
       text: '認識FMOD',
