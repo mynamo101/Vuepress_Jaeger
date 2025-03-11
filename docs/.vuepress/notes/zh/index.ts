@@ -1,11 +1,10 @@
 import { defineNotesConfig } from 'vuepress-theme-plume'
-// import { plugins } from './plugins'
-import { Guide } from './Guide'
+import { zhGuide } from './zhGuide'
 
 export const zhNotes = defineNotesConfig({
-  dir: 'notes/zh/',
+  dir: 'notes/zh',
   link: '/',
   notes: [
-    Guide,
+    zhGuide,
   ],
 })
