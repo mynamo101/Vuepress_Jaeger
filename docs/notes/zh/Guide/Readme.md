@@ -1,16 +1,3 @@
-==vuepress-theme-plume== 是一个基于 VuePress 的主题，无论您是想写 **生活类博客**、**技术类博客**、
-或者是 **产品文档**、**知识库**、**系列文档** 等，主题都可以满足您的需求。
-
-主题针对 文本内容、图片内容 的表现做了大量的优化，特别是针对 Markdown 内容的语法 做了 丰富的扩展，
-你可以很轻松的利用这些特性编写 美观、易读、表现力丰富 的内容。
-
-::: details 不了解 VuePress ？
-
-VuePress 是一个 [静态站点生成器](https://en.wikipedia.org/wiki/Static_site_generator) (SSG) 。
-专为构建快速、以内容为中心的站点而设计。
-简而言之，VuePress 获取用 Markdown 编写的内容，对其应用主题，并生成可以轻松部署到任何地方的静态 HTML 页面。
-:::
-
 ## 优势
 
 与 vuepress 默认主题相比：
