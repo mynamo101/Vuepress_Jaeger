@@ -2,8 +2,12 @@ import { defineNavbarConfig } from 'vuepress-theme-plume'
 
 export const zhNavbar = defineNavbarConfig([
   { text: '首页', link: '/' },
-  { text: '博客', link: '/blog/' },
-  { text: '标签', link: '/blog/tags/' },
+  { 
+    text: '博客', 
+    link: '/blog/',
+    icon: 'material-symbols:article-outline',
+    activeMatch: '^/(blog|article)/',
+  },
   // { text: '归档', link: '/blog/archives/' },
   {
     text: '聲音引擎',
@@ -11,8 +15,7 @@ export const zhNavbar = defineNavbarConfig([
       {text: 'FMOD', link: '/notes/zh/Guide/FMOD/1.在開始前/什麽是FMOD.md' },
       {text: 'Wwise', link: '/notes/zh/Guide/FMOD/1.在開始前/什麽是FMOD.md' },
     ],
-    
-    activeMatch: '^/FMOD/',
+    activeMatch: '^/Guide/',
   }
 ])
 
