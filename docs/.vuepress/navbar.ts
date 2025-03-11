@@ -9,6 +9,10 @@ export const zhNavbar = defineNavbarConfig([
     text: '笔记',
     items: [{ text: '示例', link: '/notes/demo/README.md' }]
   },
+  {
+    text: '聲音引擎',
+    items: [{text: 'FMOD', link: '/FMOD/'}]
+  }
 ])
 
 export const enNavbar = defineNavbarConfig([
