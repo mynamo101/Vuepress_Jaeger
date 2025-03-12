@@ -29,7 +29,19 @@ export const zhNavbar = defineNavbarConfig([
     link: '/demos/',
     icon: 'map:wind-surfing',
   },
-
+  {
+    text: '查看更多',
+    icon: 'icon-park-outline:more-three',
+    items: [
+      {
+        text: '測試測試',
+        items: [
+          { text: '友情鏈接', link: '/Friends/' },
+          { text: '其他鏈接', link: 'https://ecosystem.vuejs.press/' },
+        ],
+      },
+    ],
+  },
 ])
 
 export const enNavbar = defineNavbarConfig([

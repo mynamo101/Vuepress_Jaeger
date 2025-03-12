@@ -1,11 +1,11 @@
 ---
-title: 部署
+title: 開始前你需要瞭解的
 icon: material-symbols:deployed-code-outline
 createTime: 2024/03/20 12:38:48
 permalink: /FMOD/Intro/
 tags:
   - 指南
-  - 部署
+  - 入門
 ---
 
 ::: tip
