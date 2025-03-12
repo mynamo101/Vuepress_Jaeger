@@ -4,10 +4,10 @@ import { enNavbar, zhNavbar } from './navbar.js'
 import { enNotes, zhNotes } from './notes/index.js'
 
 export default defineThemeConfig({
-  logo: '/docs/.vuepress/public/Images/Avatar.jpg',
+  logo: '/Images/Avatar.jpg',
 
   profile: {
-    avatar: '/docs/.vuepress/public/Images/Avatar.jpg',
+    avatar: '/Images/Avatar.jpg',
     name: 'MingYen Cheng',
     description: 'Sound & Music Lover',
     location: 'Hsinchu, Taiwan',
