@@ -1,8 +1,8 @@
 import { defineNoteConfig } from 'vuepress-theme-plume'
 
 export const FMODnotes = defineNoteConfig({
-  dir: 'FMOD/code',
-  link: '/code/',
+  dir: 'FMOD',
+  link: '/FMOD/',
   sidebar: [
     {
       text: '从这里开始',
