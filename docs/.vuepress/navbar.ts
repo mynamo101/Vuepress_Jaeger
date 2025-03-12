@@ -11,14 +11,19 @@ export const zhNavbar = defineNavbarConfig([
     ],
     activeMatch: '^/FMOD/',
   },
-
+  {
+    text: '服務說明',
+    icon: 'icon-park-outline:expand-down',
+    link: '/Service/',
+    activeMatch: '^/Service/',
+  },
   {
     text: '博客',
     link: '/blog/',
     icon: 'material-symbols:article-outline',
     activeMatch: '^/(blog|article)/',
   },
-  
+
   {
     text: '案例',
     link: '/demos/',
