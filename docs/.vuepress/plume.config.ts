@@ -42,11 +42,11 @@ export default defineThemeConfig({
   },
   autoFrontmatter: { exclude: ['**/*.snippet.*'] },
 
-  bulletin: {
-    layout: 'top-right',
-    lifetime: 'always',
-    // title: '🎉 公告 🎉',
-    contentFile: path.join(__dirname, 'bulletin.md'),
-    enablePage: page => page.path === '/guide/features/bulletin/',
-  },
+  // bulletin: {
+  //   layout: 'top-right',
+  //   lifetime: 'always',
+  //   // title: '🎉 公告 🎉',
+  //   contentFile: path.join(__dirname, 'bulletin.md'),
+  //   enablePage: page => page.path === '/guide/features/bulletin/',
+  // },
 })
