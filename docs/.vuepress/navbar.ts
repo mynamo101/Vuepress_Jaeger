@@ -9,7 +9,7 @@ export const zhNavbar = defineNavbarConfig([
       { text: 'FMOD', link: '/FMOD/Readme.md', icon: 'wpf:faq' },
       { text: 'Wwise', link: '/sponsor/', icon: 'line-md:coffee-loop' },
     ],
-    activeMatch: '^/guide/',
+    activeMatch: '^/FMOD/',
   },
   {
     text: '配置',

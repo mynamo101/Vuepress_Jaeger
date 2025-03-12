@@ -2,7 +2,7 @@
 title: Two Slash
 icon: material-symbols:experiment-outline
 createTime: 2024/03/06 11:46:49
-permalink: /FMOD/code/01
+permalink: /code/Two Slash
 outline: [2, 4]
 ---
 
