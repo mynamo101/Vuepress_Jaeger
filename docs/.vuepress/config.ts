@@ -1,4 +1,4 @@
-import type { UserConfig } from 'vuepress'
+// import type { UserConfig } from 'vuepress'
 // import fs from 'node:fs'
 // import path from 'node:path'
 import { viteBundler } from '@vuepress/bundler-vite'
@@ -32,12 +32,8 @@ export default defineUserConfig({
     addViteSsrExternal(bundlerOptions, app, '@simonwep/pickr')
   },
 
-  define: {
-    __VUEPRESS_VERSION__: vuepress,
-  },
-
   bundler: viteBundler(),
   shouldPrefetch: false,
 
   theme,
-}) as UserConfig
+})
