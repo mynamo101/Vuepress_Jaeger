@@ -3,8 +3,8 @@ import process from 'node:process'
 import { plumeTheme } from 'vuepress-theme-plume'
 
 export const theme: Theme = plumeTheme({
-  hostname: process.env.SITE_HOST || 'https://theme-plume.vuejs.press',
-  docsRepo: 'https://github.com/pengzhanbo/vuepress-theme-plume',
+  hostname: process.env.SITE_HOST || 'https://class.soundjaeger.com',
+  docsRepo: 'https://github.com/mynamo101/Vuepress_Jaeger',
   docsDir: 'docs',
   changelog: { maxCount: 10 },
   contributors: { mode: 'block' },
