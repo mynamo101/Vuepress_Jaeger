@@ -34,9 +34,8 @@ export const zhNavbar = defineNavbarConfig([
     icon: 'icon-park-outline:more-three',
     items: [
       {
-        text: '測試測試',
         items: [
-          { text: '友情鏈接', link: '/Friends/' },
+          { text: '友情鏈接', link: '/Friends.md' },
           { text: '其他鏈接', link: 'https://ecosystem.vuejs.press/' },
         ],
       },
