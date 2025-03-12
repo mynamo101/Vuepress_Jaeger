@@ -15,14 +15,14 @@ export default defineUserConfig({
   // source: path.resolve(__dirname, '../'),
   // public: path.resolve(__dirname, 'public'),
   locales: {
-    '/': { title: 'Plume 主题', lang: 'zh-CN' },
-    '/en/': { title: 'Plume Theme', lang: 'en-US' },
+    '/': { title: 'Sound Jaeger 官方文檔', lang: 'zh-CN' },
+    '/en/': { title: 'Sound Jaeger Offcial Documents', lang: 'en-US' },
   },
 
   head: [
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
-    ['meta', { name: 'google-site-verification', content: 'AaTP7bapCAcoO9ZGE67ilpy99GL6tYqtD30tRHjO9Ps' }],
+    // ['meta', { name: 'google-site-verification', content: 'AaTP7bapCAcoO9ZGE67ilpy99GL6tYqtD30tRHjO9Ps' }],
   ],
 
   // pagePatterns: ['**/*.md', '!**/*.snippet.md', '!.vuepress', '!node_modules', '!docs/notes/theme/guide/代码演示/demo/*'],

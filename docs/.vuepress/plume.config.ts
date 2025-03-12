@@ -7,15 +7,15 @@ export default defineThemeConfig({
   logo: '/plume.png',
 
   profile: {
-    avatar: '/plume.png',
-    name: 'Plume Theme',
-    description: 'The Theme for Vuepress 2.0',
-    location: 'GuangZhou, China',
-    organization: 'pengzhanbo',
+    avatar: '/Avatar.jpg',
+    name: 'MingYen Cheng',
+    description: 'Sound & Music Lover',
+    location: 'Hsinchu, Taiwan',
+    organization: '聲岳設計',
   },
 
   social: [
-    { icon: 'github', link: 'https://github.com/pengzhanbo/vuepress-theme-plume' },
+    { icon: 'instagram', link: 'https://www.instagram.com/soundjaeger/' },
 
   ],
   navbarSocialInclude: ['github', 'qq'],
