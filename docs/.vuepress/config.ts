@@ -7,7 +7,7 @@ import { defineUserConfig } from 'vuepress'
 import { theme } from './theme.js'
 
 // const pnpmWorkspace = fs.readFileSync(path.resolve(__dirname, '../../pnpm-workspace.yaml'), 'utf-8')
-const vuepress = pnpmWorkspace.match(/vuepress:\s(.*)/)?.[1] || ''
+// const vuepress = pnpmWorkspace.match(/vuepress:\s(.*)/)?.[1] || ''
 
 export default defineUserConfig({
   base: '/',
