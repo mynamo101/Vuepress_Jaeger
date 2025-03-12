@@ -5,7 +5,10 @@ export const zhNavbar = defineNavbarConfig([
   {
     text: '指南',
     icon: 'icon-park-outline:guide-board',
-    link: '/notes/theme/guide/介绍.md',
+    items: [
+      { text: 'FMOD', link: '/FMOD/Intro/Readme.md', icon: 'wpf:faq' },
+      { text: 'Wwise', link: '/sponsor/', icon: 'line-md:coffee-loop' },
+    ],
     activeMatch: '^/guide/',
   },
   {
