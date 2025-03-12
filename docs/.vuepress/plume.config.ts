@@ -4,7 +4,7 @@ import { enNavbar, zhNavbar } from './navbar.js'
 import { enNotes, zhNotes } from './notes/index.js'
 
 export default defineThemeConfig({
-  logo: '/Images/Avatar.jpg',
+  logo: '/Images/logo.svg',
 
   profile: {
     avatar: '/Images/Avatar.jpg',
@@ -16,12 +16,11 @@ export default defineThemeConfig({
 
   social: [
     { icon: 'instagram', link: 'https://www.instagram.com/soundjaeger/' },
-
   ],
-  navbarSocialInclude: ['github', 'qq'],
+  navbarSocialInclude: ['instagram', 'qq'],
 
   footer: {
-    copyright: 'Copyright © 2021-present pengzhanbo',
+    copyright: 'Copyright © 2022-present Sound Jaeger',
   },
 
   locales: {
