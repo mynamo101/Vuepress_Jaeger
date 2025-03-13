@@ -2,10 +2,10 @@
 title: 部署
 icon: material-symbols:deployed-code-outline
 createTime: 2024/03/20 12:38:48
-
 tags:
   - 指南
   - 部署
+permalink: /FMOD/xkz9wku0/
 ---
 
 ::: tip

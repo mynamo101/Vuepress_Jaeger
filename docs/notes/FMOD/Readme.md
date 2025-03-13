@@ -9,7 +9,7 @@ tags:
 ---
 
 ::: tip
-此文档 fork 自 [vuepress official doc](https://v2.vuepress.vuejs.org/zh/guide/deployment.html)。
+想像一下，你的遊戲世界裡，風吹樹葉沙沙作響、子彈呼嘯而過、角色情緒透過聲音表達，這些都是 FMOD 可以做到的！FMOD 就像一位音訊魔法師，讓聲音在你的遊戲中活起來。
 :::
 
 下述的指南基于以下条件：
