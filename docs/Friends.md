@@ -3,9 +3,9 @@ pageLayout: friends
 title: 友情链接
 list:
   -
-    name: 
+    name: null
     link: https://github.com/mynamo101
-    avatar: '/Images/Avatars.jpg'
+    avatar: /Images/Avatars.jpg
     location: 新竹，台灣
     organization: Sound Jaeger
     desc: 相信創造的力量。
@@ -16,4 +16,5 @@ list:
       -
         icon: Instagram
         link: https://
+permalink: /article/3cqaqqbl/
 ---
