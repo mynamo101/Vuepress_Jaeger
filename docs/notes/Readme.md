@@ -2,7 +2,7 @@
 title: 開始前你需要瞭解的
 icon: material-symbols:deployed-code-outline
 createTime: 2024/03/20 12:38:48
-permalink: /Intro/
+copyright: CC-BY-4.0
 tags:
   - 指南
   - 入門
@@ -12,249 +12,141 @@ tags:
 想像一下，你的遊戲世界裡，風吹樹葉沙沙作響、子彈呼嘯而過、角色情緒透過聲音表達，這些都是 FMOD 可以做到的！FMOD 就像一位音訊魔法師，讓聲音在你的遊戲中活起來。
 :::
 
-## 為什麽要使用聲音引擎？
+## 什麽是 ==**聲音引擎?**== 引擎
 
-1. 设置正确的 [base](https://v2.vuepress.vuejs.org/zh/reference/config.html#base) 选项。
+在遊戲開發中，聲音引擎是一個專門用於處理遊戲中音訊的軟體系統。
 
-   如果你准备发布到 `https://<USERNAME>.github.io/` ，你可以省略这一步，因为 `base` 默认就是 `"/"` 。
+它的主要功能包括：
+- [x] 播放各種音效和背景音樂。
+- [x] 管理聲音的空間定位，模擬聲音的遠近、方向等。
+- [x] 實現聲音的動態變化，例如根據遊戲事件調整音量、音調等。
+- [x] 優化音訊播放，提高遊戲效能。
+- [x] 知名的遊戲聲音引擎包括 FMOD 和 Wwise等。
 
-   如果你准备发布到 `https://<USERNAME>.github.io/<REPO>/` ，也就是说你的仓库地址是 `https://github.com/<USERNAME>/<REPO>` ，则将 `base` 设置为 `"/<REPO>/"`。
+## **為什麽要使用聲音引擎？**
 
-2. 选择你想要使用的 CI 工具。这里我们以 [GitHub Actions](https://github.com/features/actions) 为例。
+很多讀者覺得好奇，常見的遊戲引擎內已經整合了聲音播放的功能，也自帶了非常多的效果和插件，為什麽還需要另外安裝一個聲音引擎作為輔助呢？
 
-   创建 `.github/workflows/docs.yml` 文件来配置工作流。
+我們可以從遊戲開發的過程來側面描述這個問題。
 
-::: details 点击展开配置样例
+##  **關於開發流程**
 
-```yaml
-name: docs
+```mermaid
+---
+title: 開發流程
+---
+flowchart TB
 
-on:
-  # 每当 push 到 main 分支时触发部署
-  push:
-    branches: [main]
-  # 手动触发部署
-  workflow_dispatch:
 
-jobs:
-  docs:
-    runs-on: ubuntu-latest
+    需求發想 --> **動畫特效**
+    需求發想 --> **遊戲設計**
+    對話設計 --> **聲音**
+    
+    subgraph **企劃**
+    市場調查 --> 需求發想 
+    end
+    subgraph **美術**
+    原畫&角色設計
+    3D製作
+    Rigging
+    場景設計
+    UI設計
+    end
+    subgraph **遊戲設計**
+    背景設定
+    關卡設計
+    劇情設計
+    對話設計
+    end
+    subgraph **動畫特效**
+    動畫製作
+    特效製作
+    end
+    subgraph **聲音**
+    音效製作 --> 聲音整合
+    音樂製作 --> 聲音整合
+    end
+    
+    subgraph **技術**
+    環境架設 --> 遊戲整合
+    遊戲整合 --> 包版測試
+    包版測試 --> 除錯 --> 優化
+    end
+    Rigging --> **動畫特效**
+    **遊戲設計** --> **美術**
+    **動畫特效** --> **聲音**
+    **動畫特效** --> **技術**
+    **美術** --> **聲音**
+    **聲音** --> **技術**
+    **美術** --> **技術**
 
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          # “最近更新时间” 等 git 日志相关信息，需要拉取全部提交记录
-          fetch-depth: 0
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          # 选择要使用的 pnpm 版本
-          version: 8
-          # 使用 pnpm 安装依赖
-          run_install: true
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          # 选择要使用的 node 版本
-          node-version: 20
-          # 缓存 pnpm 依赖
-          cache: pnpm
-
-      # 运行构建脚本
-      - name: Build VuePress site
-        run: pnpm docs:build
-
-      # 查看 workflow 的文档来获取更多信息
-      # @see https://github.com/crazy-max/ghaction-github-pages
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v4
-        with:
-          # 部署到 gh-pages 分支
-          target_branch: gh-pages
-          # 部署目录为 VuePress 的默认输出目录
-          build_dir: docs/.vuepress/dist
-        env:
-          # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+:::: steps
+1.  **概念發想與企劃階段**
+
+    遊戲概念確立：
+    確定遊戲類型、主題、目標受眾。
+    構思遊戲的核心玩法和獨特之處。
+
+2. **美術設計**
+
+    設計遊戲角色、場景、介面等視覺元素。製作遊戲的概念藝術和模型。
+
+3. **場景設計**
+
+    會製作遊戲中使用到的場景，通常包括2D平面場景或3D場景。
+
+4. **聲音設計**
+  
+    > 替專案製作音樂，設計專案專案中會使用到的音效，確保聲音播放正確與完美。
+
+5. **程式整合**
+
+   程式將上述所有美術資源和企劃文件協同處理後，一起整合進專案，進行最後打包和輸出的工作。
+::::
+
+
+通常程式的撰寫會在專案初期就架設好開發環境，接下來會交由美術和場景人員進行視覺素材的開發和製作。
+然而，多數的時候這兩個項目是同時並進的。
+
+---
+### **時程不夠的問題**
+
+> 聲音的製作往往是所有專案開發裏面的靠後的一個環節，如果在專案開發時程不長的情況下，非常容易被壓縮。
+
+身為遊戲相關從業人員都知道：時程過於緊湊，很有可能導致專案品質!!大爆死xD!!。
+
+正因為聲音製作的環節往往受制於美術素材和背景設定，一旦壓縮了工作時間，
+不僅會讓聲音在製作過程中品質大打折扣，專案中有很多聽覺表現將會收到大幅度的影響。
+
+:::tip 所以技術看來壓力最大？
+這是極為可能的。
+
+在時程非常緊湊且不足的情況下，技術人員勢必得==刪減美術部分的整合工作=={.caution}，進而導致
+ **聲音設計師** 製作完的素材很有可能無法接入遊戲內，無法達到心目中想要的表現效果。
 :::
 
-::: tip
-请参考 [GitHub Pages 官方指南](https://pages.github.com/) 来获取更多信息。
+### **更明確的溝通**
+
+作為一個優秀的聲音製作人員，清楚==企劃要什麽==是極為重要的。
+通常在企劃前期階段，聲音製作人就需要和遊戲設計人員盡早開始溝通，瞭解開發的專案整體的==美術風格、劇情走向和競品參考==，會對接下來的製作訂下更明確的方向。
+
+:::: card-grid
+::: card title="與企劃" icon="twemoji:artist-light-skin-tone"
+如果
 :::
 
-## GitLab Pages
+::: card title="與技術" icon="twemoji:technologist"
 
-1. 设置正确的 [base](https://v2.vuepress.vuejs.org/zh/reference/config.html#base) 选项。
+这里是卡片内容。
+:::
+::::
 
-   如果你准备发布到 `https://<USERNAME>.gitlab.io/` ，你可以省略这一步，因此 `base` 默认就是 `"/"` 。
-
-   如果你准备发布到 `https://<USERNAME>.gitlab.io/<REPO>/` ，也就是说你的仓库地址是 `https://gitlab.com/<USERNAME>/<REPO>` ，则将 `base` 设置为 `"/<REPO>/"`。
-
-2. 创建 `.gitlab-ci.yml` 文件来配置 [GitLab CI](https://about.gitlab.com/stages-devops-lifecycle/continuous-integration/) 工作流。
-
-::: details 点击展开配置样例
-
-```yaml
-# 选择你要使用的 docker 镜像
-image: node:18-buster
-
-pages:
-  # 每当 push 到 main 分支时触发部署
-  only:
-    - main
-
-  # 缓存 node_modules
-  cache:
-    key:
-      files:
-        - pnpm-lock.yaml
-    paths:
-      - .pnpm-store
-
-  # 安装 pnpm
-  before_script:
-    - curl -fsSL https://get.pnpm.io/install.sh | sh -
-    - pnpm config set store-dir .pnpm-store
-
-  # 安装依赖并运行构建脚本
-  script:
-    - pnpm install --frozen-lockfile
-    - pnpm docs:build --dest public
-
-  artifacts:
-    paths:
-      - public
-```
-
+:::note 為什麽我無法理解企劃要的是什麽？
+很大的原因會在於 **企劃方面** 是否給出了明確的風格參考和專案開發方向。
+若是無法在需求的說明上給出完整的規劃，很容易在後期得到不服預期的結果。
+> 需求越明確，誤會也越少！
 :::
 
-::: tip
-请参考 [GitLab Pages 官方指南](https://docs.gitlab.com/ce/user/project/pages/#getting-started) 来获取更多信息。
-:::
 
-## Google Firebase
-
-1. 请确保你已经安装了 [firebase-tools](https://www.npmjs.com/package/firebase-tools)。
-
-2. 在你项目的根目录下创建 `firebase.json` 和 `.firebaserc`，并包含以下内容：
-
-    `firebase.json`:
-
-    ```json
-    {
-      "hosting": {
-        "public": "./docs/.vuepress/dist",
-        "ignore": []
-      }
-    }
-    ```
-
-    `.firebaserc`:
-
-    ```json
-    {
-      "projects": {
-        "default": "<YOUR_FIREBASE_ID>"
-      }
-    }
-    ```
-
-3. 在执行了 `pnpm docs:build` 后, 使用 `firebase deploy` 指令来部署。
-
-::: tip
-请参考 [Firebase CLI 官方指南](https://firebase.google.com/docs/cli) 来获取更多信息。
-:::
-
-## Heroku
-
-1. 首先安装 [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)；
-
-2. [在这里](https://signup.heroku.com) 注册一个 Heroku 账号；
-
-3. 运行 `heroku login` 并填写你的 Heroku 认证信息：
-
-    ```bash
-    heroku login
-    ```
-
-4. 在你的项目根目录中，创建一个名为 `static.json` 的文件，并包含下述内容：
-
-`static.json`:
-
-```json
-{
-  "root": "./docs/.vuepress/dist"
-}
-```
-
-这里是你项目的配置，请参考 [heroku-buildpack-static](https://github.com/heroku/heroku-buildpack-static) 来获取更多信息。
-
-## Kinsta
-
-请查看 [Set Up VuePress on Kinsta](https://kinsta.com/docs/vuepress-application/) 。
-
-## Edgio
-
-请查看 [Edgio Documentation > Framework Guides > VuePress](https://docs.edg.io/guides/vuepress) 。
-
-## Netlify
-
-1. 前往 [Netlify](https://netlify.com) ，从 GitHub 创建一个新项目，并进行如下配置：
-
-   - **Build Command:** `pnpm docs:build`
-   - **Publish directory:** `docs/.vuepress/dist`
-
-2. 设置 [Environment variables](https://docs.netlify.com/configure-builds/environment-variables) 来选择 Node 版本：
-
-   - `NODE_VERSION`: 18
-
-3. 点击 deploy 按钮。
-
-## Vercel
-
-1. 前往 [Vercel](https://vercel.com) ，从 GitHub 创建一个新项目，并进行如下配置：
-
-   - **FRAMEWORK PRESET:** `Other`
-   - **BUILD COMMAND:** `pnpm docs:build`
-   - **OUTPUT DIRECTORY:** `docs/.vuepress/dist`
-
-2. 点击 deploy 按钮。
-
-<!-- 下列平台是中文文档特有的，放在最下方 -->
-
-## 云开发 CloudBase
-
-[云开发 CloudBase](https://cloudbase.net/?site=vuepress) 是一个云原生一体化的 Serverless 云平台，
-支持静态网站、容器等多种托管能力，并提供简便的部署工具 [CloudBase Framework](https://cloudbase.net/framework.html?site=vuepress) 来一键部署应用。
-
-1. 全局安装 CloudBase CLI ：
-
-   ```bash
-   pnpm install -g @cloudbase/cli
-   ```
-
-2. 在项目根目录运行以下命令一键部署 VuePress 应用，在部署之前可以先
-   [开通环境](https://console.cloud.tencent.com/tcb/env/index?tdl_anchor=ad&tdl_site=vuejs)：
-
-    ```bash
-    cloudbase init --without-template
-    cloudbase framework:deploy
-    ```
-
-CloudBase CLI 首先会跳转到控制台进行登录授权，然后将会交互式进行确认。
-
-确认信息后会立即进行部署，部署完成后，可以获得一个自动 SSL，CDN 加速的网站应用，你也可以搭配使用 GitHub Action 来持续部署 GitHub 上的 VuePress 应用。
-
-也可以使用 `cloudbase init --template vuepress` 快速创建和部署一个新的 VuePress 应用。
-
-::: tip
-更多详细信息请查看 CloudBase Framework 的[部署项目示例](https://github.com/TencentCloudBase/cloudbase-framework?site=vuepress#%E9%A1%B9%E7%9B%AE%E7%A4%BA%E4%BE%8B)
-:::
-
-## 21 云盒子
-
-请查看 [21 云盒子 - 部署一个 VuePress 静态网页](https://www.21yunbox.com/docs/#/deploy-vuepress)。
