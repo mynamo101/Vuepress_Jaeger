@@ -26,7 +26,15 @@
   */
 
   /* 文本大小 */
-  --vp-code-font-size: 1em;
+  font-size: 1em;
+  --vp-custom-block-font-size:.875em;
+  .vp-doc p{
+    line-height: 1.75em;
+  }
+  .vp-doc blockquote > p {
+    font-size: 0.9em;
+    line-height:1.5;
+  }
 }
 
 /** 深色模式 */

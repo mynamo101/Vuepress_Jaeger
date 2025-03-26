@@ -11,11 +11,11 @@ import { theme } from './theme.js'
 
 export default defineUserConfig({
   base: '/',
-  lang: 'zh-CN',
+  lang: 'zh-TW',
   // source: path.resolve(__dirname, '../'),
   // public: path.resolve(__dirname, 'public'),
   locales: {
-    '/': { title: 'Sound Jaeger 官方文檔', lang: 'zh-CN' },
+    '/': { title: 'Sound Jaeger 官方文檔', lang: 'zh-TW' },
     '/en/': { title: 'Sound Jaeger Offcial Documents', lang: 'en-US' },
   },
 
