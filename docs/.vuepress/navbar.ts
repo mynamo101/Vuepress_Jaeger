@@ -15,7 +15,7 @@ export const zhNavbar = defineNavbarConfig([
   {
     text: '服務說明',
     icon: 'icon-park-outline:expand-down',
-    link: '/Service/',
+    link: '/notes/Service/1.關於服務/介紹.md',
     activeMatch: '^/Service/',
   },
   {
