@@ -2,6 +2,7 @@ import type { Theme } from 'vuepress'
 import process from 'node:process'
 import { plumeTheme } from 'vuepress-theme-plume'
 
+
 export const theme: Theme = plumeTheme({
   hostname: process.env.SITE_HOST || 'https://class.soundjaeger.com',
   docsRepo: 'https://github.com/mynamo101/Vuepress_Jaeger',
@@ -65,7 +66,7 @@ export const theme: Theme = plumeTheme({
     watermark: {
       enabled: false,
       watermarkOptions: {
-        content: 'vuepress-theme-plume',
+        content: 'Sound Jaeger',
       },
     },
 
