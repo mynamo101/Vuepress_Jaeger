@@ -14,6 +14,10 @@ export default defineThemeConfig({
     organization: '聲岳設計',
   },
 
+  blog: {
+    include: ['blog/**/*.md'],
+  },
+  
   social: [
     { icon: 'instagram', link: 'https://www.instagram.com/soundjaeger/' },
   ],
@@ -38,11 +42,11 @@ export default defineThemeConfig({
     rules: {
       '/article/enx7c9s/': '123456',
       '/article/1zha8bjg/': 'sj2024',
-      '/FMOD/tjn9v3tp/': 'sj2024',
+      '/FMOD/': 'sj2024',
     },
   },
   autoFrontmatter: { exclude: ['**/*.snippet.*'] },
-
+  
   // bulletin: {
   //   layout: 'top-right',
   //   lifetime: 'always',

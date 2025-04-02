@@ -8,9 +8,9 @@ export const zhNavbar = defineNavbarConfig([
     items: [
       { text: '聲音引擎', link: '/notes/Readme.md', icon: 'wpf:faq' },
       { text: 'FMOD', link: '/notes/FMOD/1.開始準備/介紹.md', icon: 'wpf:faq' },
-      { text: 'Wwise', link: '/sponsor/', icon: 'line-md:coffee-loop' },
+      { text: 'Wwise', link: '/notes/Wwise/1.開始準備/介紹.md', icon: 'line-md:coffee-loop' },
     ],
-    activeMatch: '^/FMOD/',
+    activeMatch: '^/(FMOD|Wwise)/',
   },
   {
     text: '服務說明',
@@ -18,18 +18,17 @@ export const zhNavbar = defineNavbarConfig([
     link: '/notes/Service/1.關於服務/介紹.md',
     activeMatch: '^/Service/',
   },
-  {
-    text: '博客',
-    link: '/blog/',
-    icon: 'material-symbols:article-outline',
-    activeMatch: '^/(blog|article)/',
-  },
-
-  {
-    text: '案例',
-    link: '/demos/',
-    icon: 'map:wind-surfing',
-  },
+  // {
+  //   text: '博客',
+  //   link: '/blog/',
+  //   icon: 'material-symbols:article-outline',
+  //   activeMatch: '^/(blog|article)/',
+  // },
+  // {
+  //   text: '案例',
+  //   link: '/demos/',
+  //   icon: 'map:wind-surfing',
+  // },
   {
     text: '查看更多',
     icon: 'icon-park-outline:more-three',
@@ -37,7 +36,7 @@ export const zhNavbar = defineNavbarConfig([
       {
         items: [
           { text: '友情鏈接', link: '/Friends.md' },
-          { text: '其他鏈接', link: 'https://ecosystem.vuejs.press/' },
+          // { text: '其他鏈接', link: 'https://ecosystem.vuejs.press/' },
         ],
       },
     ],

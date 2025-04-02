@@ -65,6 +65,7 @@ export const theme: Theme = plumeTheme({
 
     watermark: {
       enabled: false,
+      fullPage: false,
       watermarkOptions: {
         content: 'Sound Jaeger',
       },

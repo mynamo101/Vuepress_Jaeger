@@ -1,6 +1,6 @@
 ---
 pageLayout: friends
-title: 友情贊助
+title: 友情鏈接
 list:
   -
     name: MingYen Cheng

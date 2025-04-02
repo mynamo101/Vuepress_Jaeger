@@ -26,13 +26,13 @@
   */
 
   /* 文本大小 */
-  font-size: 1em;
+  font-size: 1.2em;
   --vp-custom-block-font-size:.875em;
   .vp-doc p{
     line-height: 1.75em;
   }
   .vp-doc blockquote > p {
-    font-size: 0.9em;
+    font-size: 1em;
     line-height:1.5;
   }
 }

@@ -5,6 +5,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { addViteOptimizeDepsInclude, addViteSsrExternal } from '@vuepress/helper'
 import { defineUserConfig } from 'vuepress'
 import { theme } from './theme.js'
+import plumeConfig from './plume.config.js'
 
 // const pnpmWorkspace = fs.readFileSync(path.resolve(__dirname, '../../pnpm-workspace.yaml'), 'utf-8')
 // const vuepress = pnpmWorkspace.match(/vuepress:\s(.*)/)?.[1] || ''
@@ -18,7 +19,7 @@ export default defineUserConfig({
     '/': { title: 'Sound Jaeger 官方文檔', lang: 'zh-TW' },
     '/en/': { title: 'Sound Jaeger Offcial Documents', lang: 'en-US' },
   },
-
+  
   head: [
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],

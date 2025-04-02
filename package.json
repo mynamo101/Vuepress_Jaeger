@@ -46,6 +46,7 @@
     "markmap-lib": "^0.18.11",
     "markmap-toolbar": "^0.18.10",
     "mermaid": "^11.4.1",
-    "vuepress-plugin-md-enhance": "^2.0.0-rc.74"
+    "vuepress-plugin-md-enhance": "^2.0.0-rc.74",
+    "wavesurfer.js": "^7.9.4"
   }
 }
