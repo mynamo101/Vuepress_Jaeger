@@ -56,7 +56,7 @@ import RegionsPlugin from 'wavesurfer.js/dist/plugins/regions.esm.js'  // 添加
 export default {
   name: 'WaveSurferPlayer',
   props: {
-    src: String,
+    audioSrc: String,
     showHover: Boolean,
     showRegions: Boolean,
     // 显示控制参数
@@ -114,6 +114,8 @@ export default {
       preservePitch: true,
       regionsPlugin: null,
       activeRegion: null,
+
+      audioContext: null,
     }
   },
   computed: {
@@ -121,8 +123,8 @@ export default {
   mounted() {
     this.initWaveSurfer()
 
-    if (this.src) {
-      this.loadAudio(this.src)
+    if (this.audioSrc) {
+      this.loadAudio(this.audioSrc)
     }
   },
   beforeDestroy() {
@@ -131,7 +133,7 @@ export default {
     }
   },
   watch: {
-    src(newSrc) {
+    audioSrc(newSrc) {
       if (newSrc && this.wavesurfer) {
         this.loadAudio(newSrc)
       }
@@ -140,7 +142,7 @@ export default {
   methods: {
     initWaveSurfer() {
       const plugins = []
-
+      this.audioContext = new (window.AudioContext || window.webkitAudioContext)()
       // 添加Minimap插件
       if (this.showMinimap) {
         plugins.push(
@@ -196,6 +198,8 @@ export default {
 
       this.wavesurfer = WaveSurfer.create({
         container: this.$refs.waveform,
+        backend: 'WebAudio',
+        audioContext: this.audioContext, // 使用 Web Audio API
         waveColor: '#525252',       // 波形颜色
         progressColor: '#EEB12E',   // 播放进度颜色
         cursorColor: '#1a1a1a',     // 光标颜色
@@ -246,9 +250,10 @@ export default {
     },
 
     playPause() {
-    
-    if (!this.wavesurfer) return;
-    this.wavesurfer.playPause();
+      if (this.wavesurfer){
+        this.wavesurfer.playPause();
+        this.isPlaying = !this.isPlaying;
+      }
     }, 
     
     setVolume() {

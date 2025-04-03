@@ -5,7 +5,7 @@
         :src="videoSrc"
         controls
         playsinline
-        style="width: 100%; max-width: 600px; margin: 0 auto; display: block;"
+        style="width: 100%; margin: 0 auto; display: block;"
       />
       <div ref="waveformContainer" style="margin-top: 20px;"></div>
     </div>
@@ -24,7 +24,8 @@
     },
     data() {
       return {
-        wavesurfer: null
+        wavesurfer: null,
+        isPlaying: false
       }
     },
     mounted() {
@@ -59,6 +60,14 @@
   
         this.wavesurfer.on('error', (error) => {
           console.error('WaveSurfer error:', error)
+        })
+
+        this.wavesurfer.on('play', () => {
+          this.isPlaying = true
+        })
+
+        this.wavesurfer.on('pause', () => {
+          this.isPlaying = false
         })
       }
     }
