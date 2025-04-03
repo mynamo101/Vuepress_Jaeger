@@ -49,7 +49,7 @@ permalink: /article/g6ebyl5g/
 />`
 ```
 
-<!-- ::: chat title="标题"
+::: chat title="标题"
 {:2025-03-24 10:15:00}
 
 {用户一}
@@ -63,7 +63,7 @@ permalink: /article/g6ebyl5g/
 
 {.}
 本人的消息
-::: -->
+:::
 
 
 <WaveSurferPlayer 

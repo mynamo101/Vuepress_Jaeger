@@ -27,6 +27,7 @@ export const theme: Theme = plumeTheme({
       flowchart: true,
     },
     markdownPower: {
+      chat:true,
       annotation: true,
       abbr: true,
       imageSize: 'all',
