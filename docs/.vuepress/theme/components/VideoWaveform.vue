@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="video-wrapper">
     <video ref="videoElement" :src="videoSrc" controls playsinline
-      style="width: 100%; margin: 0 auto; display: block;" />
+      style="width: 100%; margin: 0 auto; display: block; border-radius:15px;" />
     <div ref="waveformContainer" style="margin-top: 20px;"></div>
   </div>
 </template>
@@ -33,6 +33,9 @@ export default {
         console.log('Blocked unexpected play in VideoWaveform');
       }
     })
+    this.$refs.videoElement.addEventListener('click', (e) => {
+      console.log('Video element clicked directly');
+    })
   },
   beforeDestroy() {
     if (this.wavesurfer) {
@@ -54,7 +57,8 @@ export default {
         cursorColor: '#ddd',
         barWidth: 2,
         barRadius: 3,
-        barGap: 2
+        barGap: 2,
+        dragToSeek: true,
       })
 
       // 可以添加一些事件监听
@@ -68,6 +72,7 @@ export default {
 
       this.wavesurfer.on('play', () => {
         console.log('影片被播放');
+        this.$refs.videoElement.play();
         this.isPlaying = true
       })
 
@@ -75,9 +80,18 @@ export default {
         this.isPlaying = false
       })
       this.$refs.videoElement.addEventListener('play', () => {
+        if (!this.isPlaying) {
+          this.wavesurfer.play();
+        }
         console.log('Video element play triggered');
       });
     }
   }
 }
 </script>
+
+<style>
+.video-wrapper {
+  pointer-events: auto; /* 确保事件正常触发 */
+}
+</style>

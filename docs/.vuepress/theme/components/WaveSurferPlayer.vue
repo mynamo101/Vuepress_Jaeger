@@ -223,12 +223,12 @@ export default {
       this.wavesurfer.setVolume(this.volume)
 
       this.wavesurfer.on("interaction", () => {
-        const wasPlaying = this.isPlaying; // 記錄點擊前的播放狀態
+        const wasPlaying = this.isPlaying;
         const newTime = this.wavesurfer.getCurrentTime();
         console.log("點擊波形！當前進度:", newTime);
-        this.wavesurfer.seekTo(newTime / this.wavesurfer.getDuration()); // 移動播放頭
+        this.wavesurfer.seekTo(newTime / this.wavesurfer.getDuration());
         if (!wasPlaying) {
-          this.wavesurfer.pause(); // 如果原本沒在播放，確保點擊後不播放
+          this.wavesurfer.pause();
         }
       })
 
