@@ -1,7 +1,7 @@
 <template>
   <div class="video-wrapper">
     <video ref="videoElement" :src="videoSrc" controls playsinline
-      style="width: 100%; margin: 0 auto; display: block; border-radius:15px;" />
+      style="width: 100%; margin: 0 auto; display: block; border-radius:10px;" /> 
     <div ref="waveformContainer" style="margin-top: 20px;"></div>
   </div>
 </template>
@@ -14,7 +14,19 @@ export default {
   props: {
     videoSrc: {
       type: String,
-      required: true
+      required: true,
+    },
+    barGap: {
+      type: Number,
+      default: 3
+    },
+    barWidth: {
+      type: Number,   
+      default: 4
+    },
+    minPxPerSec: {
+      type: Number,
+      default: 100
     }
   },
   data() {
@@ -47,18 +59,21 @@ export default {
       console.log(this.wavesurfer)
       this.wavesurfer = WaveSurfer.create({
         container: this.$refs.waveformContainer,
-        waveColor: 'rgb(200, 0, 200)',
-        progressColor: 'rgb(100, 0, 100)',
+        waveColor: 'rgb(218 218 218)',
+        progressColor: 'rgb(51 207 121)',
         media: this.$refs.videoElement,
         // 可选配置
         backend: 'MediaElement',
         responsive: true,
-        cursorWidth: 1,
-        cursorColor: '#ddd',
-        barWidth: 2,
-        barRadius: 3,
-        barGap: 2,
+        cursorWidth: 2,
+        cursorColor: '#DA0E0E85',
+        barWidth: this.barWidth,
+        barRadius: 5,
+        barGap: this.barGap,
         dragToSeek: true,
+        minPxPerSec: this.minPxPerSec,
+        height: 100,
+        hideScrollbar: true,
       })
 
       // 可以添加一些事件监听
@@ -92,6 +107,7 @@ export default {
 
 <style>
 .video-wrapper {
-  pointer-events: auto; /* 确保事件正常触发 */
+  pointer-events: auto;
+  /* 确保事件正常触发 */
 }
 </style>

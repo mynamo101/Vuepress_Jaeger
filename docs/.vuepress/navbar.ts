@@ -18,12 +18,12 @@ export const zhNavbar = defineNavbarConfig([
     link: '/notes/Service/1.關於服務/介紹.md',
     activeMatch: '^/Service/',
   },
-  // {
-  //   text: '博客',
-  //   link: '/blog/',
-  //   icon: 'material-symbols:article-outline',
-  //   activeMatch: '^/(blog|article)/',
-  // },
+  {
+    text: '博客',
+    link: '/blog/',
+    icon: 'material-symbols:article-outline',
+    activeMatch: '^/(blog|article)/',
+  },
   // {
   //   text: '案例',
   //   link: '/demos/',

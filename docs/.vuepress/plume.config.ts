@@ -1,5 +1,5 @@
 import path from 'node:path'
-import { defineThemeConfig } from 'vuepress-theme-plume'
+import plumeTheme, { defineThemeConfig } from 'vuepress-theme-plume'
 import { enNavbar, zhNavbar } from './navbar.js'
 import { enNotes, zhNotes } from './notes/index.js'
 
@@ -45,7 +45,7 @@ export default defineThemeConfig({
       '/FMOD/': 'sj2024',
     },
   },
-  autoFrontmatter: { exclude: ['**/*.snippet.*'] },
+  autoFrontmatter: { exclude: ['**/*.snippet.*'] }
   
   // bulletin: {
   //   layout: 'top-right',

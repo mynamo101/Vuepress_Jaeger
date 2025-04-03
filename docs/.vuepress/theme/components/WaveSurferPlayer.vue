@@ -59,7 +59,7 @@ export default {
     audioSrc: String,
     showHover: Boolean,
     showRegions: Boolean,
-    // 显示控制参数
+
     showPitchControl: {
       type: Boolean,
       default: false
