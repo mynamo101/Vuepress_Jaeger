@@ -217,13 +217,20 @@ export default {
         minPxPerSec: this.minPxPerSec,
         hideScrollbar: false,
         autoCenter: true,
+        interaction: false,
       })
 
       this.wavesurfer.setVolume(this.volume)
 
       this.wavesurfer.on("interaction", () => {
-        console.log("点击波形！当前进度:", this.wavesurfer.getCurrentTime());
-      });
+        const wasPlaying = this.isPlaying; // 記錄點擊前的播放狀態
+        const newTime = this.wavesurfer.getCurrentTime();
+        console.log("點擊波形！當前進度:", newTime);
+        this.wavesurfer.seekTo(newTime / this.wavesurfer.getDuration()); // 移動播放頭
+        if (!wasPlaying) {
+          this.wavesurfer.pause(); // 如果原本沒在播放，確保點擊後不播放
+        }
+      })
 
       this.wavesurfer.on('play', () => {
         this.isPlaying = true
@@ -237,7 +244,7 @@ export default {
         console.log('WaveSurfer is ready!')
         this.setAudioRate()
         this.setupRegions()
-        
+
       })
       this.wavesurfer.on('error', (error) => {
         console.error('WaveSurfer error:', error)
@@ -250,14 +257,15 @@ export default {
       this.wavesurfer.load(url)
     },
 
-    playPause() {
-      if (this.wavesurfer){
-        event.stopPropagation(); // 阻止事件冒泡到父組件或全局
+    playPause(event) {
+      if (this.wavesurfer) {
+        console.log('WaveSurferPlayer playPause triggered');
+        event.stopPropagation();
         this.wavesurfer.playPause();
         // this.isPlaying = !this.isPlaying;
       }
-    }, 
-    
+    },
+
     setVolume() {
       if (this.wavesurfer) {
         this.wavesurfer.setVolume(this.volume)
@@ -550,5 +558,4 @@ export default {
 }
 
 /* 影片播放 */
-
 </style>
