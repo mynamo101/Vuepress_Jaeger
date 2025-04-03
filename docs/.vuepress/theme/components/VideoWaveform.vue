@@ -38,6 +38,7 @@
     },
     methods: {
       initWaveSurfer() {
+        console.log(this.wavesurfer)
         this.wavesurfer = WaveSurfer.create({
           container: this.$refs.waveformContainer,
           waveColor: 'rgb(200, 0, 200)',

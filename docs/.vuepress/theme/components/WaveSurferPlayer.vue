@@ -11,7 +11,7 @@
     <!-- 添加播放控制器 -->
     <div class="controls">
 
-      <button @click="playPause">{{ isPlaying ? 'Pause' : 'Play' }}</button>
+      <button @click="playPause($event)">{{ isPlaying ? 'Pause' : 'Play' }}</button>
 
       <!-- 音量控制 -->
       <div class="volume-control" v-if="showVolumeControl">
@@ -141,6 +141,7 @@ export default {
   },
   methods: {
     initWaveSurfer() {
+      console.log(this.wavesurfer)
       const plugins = []
       this.audioContext = new (window.AudioContext || window.webkitAudioContext)()
       // 添加Minimap插件
@@ -251,8 +252,9 @@ export default {
 
     playPause() {
       if (this.wavesurfer){
+        event.stopPropagation(); // 阻止事件冒泡到父組件或全局
         this.wavesurfer.playPause();
-        this.isPlaying = !this.isPlaying;
+        // this.isPlaying = !this.isPlaying;
       }
     }, 
     
