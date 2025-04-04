@@ -1,0 +1,1 @@
+npm rum docs:build

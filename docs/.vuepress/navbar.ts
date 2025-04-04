@@ -36,7 +36,7 @@ export const zhNavbar = defineNavbarConfig([
       {
         items: [
           { text: '友情鏈接', link: '/Friends.md' },
-          // { text: '其他鏈接', link: 'https://ecosystem.vuejs.press/' },
+          { text: 'Plume Theme', link: 'https://theme-plume.vuejs.press/' },
         ],
       },
     ],

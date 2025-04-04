@@ -6,6 +6,10 @@ tags:
  - 聲音
  - Vue
  - 插件
+cover: /Images/Blog/20250405011121.png
+coverStyle:
+ layout: left
+ ratio: .6
 ---
 
 ## **WaveSurferPlayer**
