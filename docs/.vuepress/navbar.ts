@@ -2,33 +2,12 @@ import { defineNavbarConfig } from 'vuepress-theme-plume'
 import { version } from '../../package.json'
 
 export const zhNavbar = defineNavbarConfig([
-  // {
-  //   text: '聲音引擎',
-  //   icon: 'icon-park-outline:guide-board',
-  //   items: [
-  //     { text: '基礎知識', link: '/notes/Readme.md', icon: 'wpf:books' },
-  //     { text: 'FMOD', link: '/notes/FMOD/1.開始準備/介紹.md', icon: 'wpf:faq' },
-  //     // { text: 'Wwise', link: '/notes/Wwise/1.開始準備/介紹.md', icon: 'line-md:coffee-loop' },
-  //   ],
-  //   activeMatch: '^/(FMOD|Wwise)/',
-  // },
   {
     text: '服務說明',
     icon: 'icon-park-outline:expand-down',
     link: '/notes/Service/1.關於服務/介紹.md',
     activeMatch: '^/Service/',
   },
-  // {
-  //   text: '聲音工具',
-  //   link: '/notes/SoundTools/1.Intro.md',
-  //   icon: 'map:wind-surfing',
-  // },
-  // {
-  //   text: '博客',
-  //   link: '/blog/',
-  //   icon: 'material-symbols:article-outline',
-  //   activeMatch: '^/(blog|article)/',
-  // },
   // {
   //   text: '查看更多',
   //   icon: 'icon-park-outline:more-three',

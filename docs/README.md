@@ -1,24 +1,31 @@
 ---
 pageLayout: home
-externalLinkIcon: false
+externalLinkIcon: true
 config:
   -
-    type: hero
+    type: 'banner'
+    banner: /Images/DSC00028.jpg
+    bannerMask:
+      light: 0.4
+      dark: 0.8
     full: true
-    background: tint-plate
     hero:
-      name: Sound Jaeger
-      tagline: 聲岳設計
-      text: 讓您在學習聲音的知識上不再困惑
+      name: Sound Jaeger Studio
+      tagline: 聲岳設計 - 官方說明文件
+      text: 關於一切你需要知道的操作步驟。
       actions:
         -
           theme: brand
-          text: 基礎知識
-          link: /blog/
+          text: 瞭解服務說明 →
+          link: /Service/ej97gqcw/
         -
           theme: alt
-          text: 我們的官網 →
-          link: https://soundjaeger.com
+          text: 回到客戶中心
+          link: https://portal.soundjaeger.com
+        -
+          theme: sponsor
+          text: 前往官網
+          link: https://soundjaeger.com 
   -
     type: features
     features:
