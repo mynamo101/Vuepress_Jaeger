@@ -18,11 +18,11 @@ export const zhNavbar = defineNavbarConfig([
     link: '/notes/Service/1.關於服務/介紹.md',
     activeMatch: '^/Service/',
   },
-  {
-    text: '聲音工具',
-    link: '/notes/SoundTools/1.Intro.md',
-    icon: 'map:wind-surfing',
-  },
+  // {
+  //   text: '聲音工具',
+  //   link: '/notes/SoundTools/1.Intro.md',
+  //   icon: 'map:wind-surfing',
+  // },
   {
     text: '博客',
     link: '/blog/',
