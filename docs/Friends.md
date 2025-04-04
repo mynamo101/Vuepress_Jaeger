@@ -3,7 +3,7 @@ pageLayout: friends
 title: 友情鏈接
 list:
   -
-    name: MingYen Cheng
+    name: Ethan Cheng
     link: https://github.com/mynamo101
     avatar: /Images/Avatar.jpg
     location: 新竹，台灣

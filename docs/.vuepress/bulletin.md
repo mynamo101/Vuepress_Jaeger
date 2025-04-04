@@ -1,7 +1,24 @@
+
+
+::: center
+喜歡Ethan的文章嗎？  
+
+**用一杯咖啡，可以讓他走得更遠。**
+
+*寫作是他興趣、也是生活中的熱情，更是與世界對話的方式。*
+
+
+如果您喜歡這些內容，或曾從某篇文章中得到靈感與幫助，  
+歡迎使用以下方式`贊助`他繼續創作。
+
+::: important [贊助管道]
+[綠界](https://www.ecpay.com.tw/)  
+[Ko-fi](https://ko-fi.com/soundjaeger)  
+☕[BuyMeACoffee](https://buymeacoffee.com/sound.jaeger)
+<img src="/Images/bmc_qr.png" alt="qr_code" style="width: 50%; display:block;margin:auto;padding:0.5em;">
+:::
+
 ::: center
 
-**QQ 交流群：** [792882761](https://qm.qq.com/q/FbPPoOIscE)
-
-您在使用过程中遇到任何问题，欢迎通过 [issue](https://github.com/pengzhanbo/vuepress-theme-plume/issues/new/choose) 反馈。也欢迎加入我们的 QQ 交流群一起讨论。
 
 :::

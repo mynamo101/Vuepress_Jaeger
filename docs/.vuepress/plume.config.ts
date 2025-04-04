@@ -8,8 +8,8 @@ export default defineThemeConfig({
 
   profile: {
     avatar: '/Images/Avatar.jpg',
-    name: 'MingYen Cheng',
-    description: 'Sound & Music Lover',
+    name: 'Ethan Cheng (麵醬)',
+    description: '寫作是興趣、既是動機也是目的，更是與世界對話的方式。',
     location: 'Hsinchu, Taiwan',
     organization: '聲岳設計',
   },
@@ -19,11 +19,12 @@ export default defineThemeConfig({
   },
   
   social: [
-    { icon: 'instagram', link: 'https://www.instagram.com/soundjaeger/' },
+    { icon: 'instagram', link: 'https://www.instagram.com/ming_dejapupu/' },
   ],
   navbarSocialInclude: ['instagram', 'qq'],
 
   footer: {
+    message: '<b> - 聯繫我們 - </b> <br>' + '電話 | 0953290311 <br>' + '電子郵件 | contact@soundjaeger.com', 
     copyright: 'Copyright © 2022-present Sound Jaeger',
   },
 
@@ -37,7 +38,6 @@ export default defineThemeConfig({
       navbar: enNavbar,
     },
   },
-
   encrypt: {
     rules: {
       '/article/enx7c9s/': '123456',
@@ -45,13 +45,13 @@ export default defineThemeConfig({
       '/FMOD/': 'sj2024',
     },
   },
-  autoFrontmatter: { exclude: ['**/*.snippet.*'] }
+  autoFrontmatter: { exclude: ['**/*.snippet.*'] },
   
-  // bulletin: {
-  //   layout: 'top-right',
-  //   lifetime: 'always',
-  //   // title: '🎉 公告 🎉',
-  //   contentFile: path.join(__dirname, 'bulletin.md'),
-  //   enablePage: page => page.path === '/guide/features/bulletin/',
-  // },
+  bulletin: {
+    layout: 'bottom-right',
+    lifetime: 'session',
+    title: '🎉 世界因你而更好 🎉',
+    contentFile: path.join(__dirname, 'bulletin.md'),
+    enablePage: page => page.path === '/blog/' // only show on this page
+  },
 })

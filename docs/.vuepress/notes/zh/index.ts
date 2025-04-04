@@ -1,9 +1,10 @@
 import { defineNotesConfig } from 'vuepress-theme-plume'
 // import { plugins } from './plugins'
-import { themeConfig } from './theme-config'
+
 import { FMODnotes } from './fmod-guide'
 import { Wwisenotes } from './wwise-guide'
-import{ service } from './service'
+import { Service } from './service'
+import { SoundTools } from './sound-tools'
 import { tools } from './tools'
 
 export const zhNotes = defineNotesConfig({
@@ -12,8 +13,8 @@ export const zhNotes = defineNotesConfig({
   notes: [
     FMODnotes,
     Wwisenotes,
-    service,
-    // themeConfig,
+    Service,
+    SoundTools,
     // plugins,
     // tools,
   ],

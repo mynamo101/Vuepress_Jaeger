@@ -25,15 +25,44 @@
   --vp-c-text-3: rgba(60, 60, 67, 0.56);
   */
 
-  /* 文本大小 */
+  /* 文章文本大小 */
   font-size: 1.2em;
-  --vp-custom-block-font-size:.875em;
-  .vp-doc p{
+  --vp-custom-block-font-size: .875em;
+
+  .vp-doc p {
     line-height: 1.75em;
   }
-  .vp-doc blockquote > p {
+
+  .vp-doc blockquote>p {
     font-size: 1em;
-    line-height:1.5;
+    line-height: 1.5;
+  }
+  /* 博主介紹文字大小 */
+  .vp-blog-profile p[data-v-2e7332cc] {
+    font-size: 0.8rem; 
+  }
+  /* Code文本大小 */
+  --vp-custom-block-code-font-size:1em;
+  --vp-font-family-mono:  "Noto Sans TC", sans-serif;
+  --vp-code-color: #2680B4;
+  --vp-code-font-size:.875em;
+  --vp-code-bg: #E0F0FD96;
+
+  /* 聊天框 */
+  @media (min-width: 960px) {
+    .vp-chat {
+      width: 100%;
+    }
+  }
+  /* 聊天背景顔色 */
+  --vp-chat-c-bg-self:rgba(113 187 84 / 0.8); 
+  .vp-chat .vp-chat-message-body .message-content{
+    border-radius: 25px;
+  }
+  /* 代碼語法 */
+  .vp-doc div[class*="language-"],
+  .vp-block {
+    margin: initial;
   }
 }
 
@@ -58,4 +87,11 @@
   --vp-c-text-2: rgba(235, 235, 245, 0.6);
   --vp-c-text-3: rgba(235, 235, 245, 0.38);
   */
+
+    /* Code文本大小 */
+    --vp-custom-block-code-font-size:1em;
+    --vp-font-family-mono:  "Noto Sans TC", sans-serif;
+    --vp-code-color: #E7C142;
+    --vp-code-font-size:.875em;
+    --vp-code-bg: #313131;
 }
