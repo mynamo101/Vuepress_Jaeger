@@ -24,7 +24,7 @@ export default defineThemeConfig({
   navbarSocialInclude: ['instagram', 'qq'],
 
   footer: {
-    message: '<b> - 聯繫我們 - </b> <br>' + '電話 | 0953290311 <br>' + '電子郵件 | contact@soundjaeger.com', 
+    message: '<b> - Contact Us - </b> <br>' + 'Phone | +886 953290311 <br>' + 'Email | contact@soundjaeger.com', 
     copyright: 'Copyright © 2022-present Sound Jaeger',
   },
 

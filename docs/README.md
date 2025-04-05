@@ -10,7 +10,7 @@ config:
       dark: 0.8
     full: true
     hero:
-      name: Sound Jaeger Studio
+      name: Sound Jaeger
       tagline: 聲岳設計 - 官方說明文件
       text: 關於一切你需要知道的操作步驟。
       actions:

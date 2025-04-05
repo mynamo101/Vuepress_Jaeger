@@ -1,0 +1,6 @@
+{
+    "i18n-ally.localesPaths": [
+        "plugins/plugin-search/src/node/locales"
+    ],
+    "CodeGPT.apiKey": "CodeGPT Plus Beta"
+}

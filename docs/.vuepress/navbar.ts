@@ -24,42 +24,9 @@ export const zhNavbar = defineNavbarConfig([
 
 export const enNavbar = defineNavbarConfig([
   {
-    text: 'Guide',
-    icon: 'icon-park-outline:guide-board',
-    link: '/en/guide/intro/',
-    activeMatch: '^/en/guide/',
-  },
-  {
-    text: 'Config',
-    icon: 'icon-park-outline:setting-two',
-    link: '/en/config/intro/',
-    activeMatch: '^/en/config/',
-  },
-  {
-    text: 'Blog',
-    link: '/en/blog/',
-    icon: 'material-symbols:article-outline',
-    activeMatch: '^/en/(blog|article)/',
-  },
-  {
-    text: 'More',
-    icon: 'icon-park-outline:more-three',
-    items: [
-      {
-        text: 'Vuepress',
-        items: [
-          { text: 'Official Docs', link: 'https://v2.vuepress.vuejs.org' },
-          { text: 'Ecosystem', link: 'https://ecosystem.vuejs.press/' },
-        ],
-      },
-    ],
-  },
-  {
-    text: `${version}`,
-    icon: 'codicon:versions',
-    items: [
-      { text: 'Changelog', link: '/changelog/' },
-      { text: 'Contributing', link: '/contributing/' },
-    ],
+    text: 'Service',
+    icon: 'icon-park-outline:expand-down',
+    link: '/en/Service/Welcome/',
+    activeMatch: '^/Service/',
   },
 ])
