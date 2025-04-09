@@ -21,10 +21,10 @@ export default defineThemeConfig({
   social: [
     { icon: 'instagram', link: 'https://www.instagram.com/ming_dejapupu/' },
   ],
-  navbarSocialInclude: ['instagram', 'qq'],
+  navbarSocialInclude: ['instagram'],
 
   footer: {
-    message: '<b> - 聯繫我們 - </b> <br>' + '電話 | 0953290311 <br>' + '電子郵件 | contact@soundjaeger.com', 
+    message: '<b> - 聯繫我們 - </b> <br>' + '電話 | 0953512151 <br>' + '電子郵件 | mynamo101@gmail.com', 
     copyright: 'Copyright © 2022-present Sound Jaeger',
   },
 
