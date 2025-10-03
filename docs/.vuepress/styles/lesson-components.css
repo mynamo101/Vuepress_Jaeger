@@ -1,0 +1,73 @@
+/* 為互動組件添加額外的主題變量支持 */
+.lesson-checklist,
+.lesson-progress-overview {
+  /* 確保在所有主題變體下都有適當的對比度 */
+  --lesson-border-color: var(--vp-c-border, #e2e8f0);
+  --lesson-bg-color: var(--vp-c-bg, #ffffff);
+  --lesson-bg-soft-color: var(--vp-c-bg-soft, #f8fafc);
+  --lesson-text-1: var(--vp-c-text-1, #213547);
+  --lesson-text-2: var(--vp-c-text-2, #476582);
+  --lesson-brand-1: var(--vp-c-brand-1, #3451b2);
+  --lesson-brand-soft: var(--vp-c-brand-soft, #e0e7ff);
+  --lesson-green-1: var(--vp-c-green-1, #10b981);
+  --lesson-green-soft: var(--vp-c-green-soft, #d1fae5);
+  --lesson-green-darker: var(--vp-c-green-darker, #059669);
+  --lesson-white: var(--vp-c-white, #ffffff);
+  --lesson-divider: var(--vp-c-divider, #e2e8f0);
+  --lesson-shadow-2: var(--vp-shadow-2, 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07));
+  --lesson-shadow-3: var(--vp-shadow-3, 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08));
+  --lesson-shadow-4: var(--vp-shadow-4, 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12));
+}
+
+/* 深色模式下的特殊處理 */
+html.dark .lesson-checklist,
+html.dark .lesson-progress-overview {
+  /* 在深色模式下增強對比度 */
+  --lesson-border-color: var(--vp-c-border, #2e2e32);
+  --lesson-bg-color: var(--vp-c-bg, #1b1b1f);
+  --lesson-bg-soft-color: var(--vp-c-bg-soft, #161618);
+  --lesson-text-1: var(--vp-c-text-1, #c9d1d9);
+  --lesson-text-2: var(--vp-c-text-2, #a3aab1);
+}
+
+/* 確保動畫和過渡在所有主題下都流暢 */
+.checklist-item,
+.lesson-card,
+.progress-fill,
+.lesson-progress-fill {
+  will-change: transform, box-shadow, border-color;
+}
+
+/* 提升可訪問性 */
+.checklist-checkbox:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+.reset-button:focus-visible,
+.export-button:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+/* 改善觸摸設備體驗 */
+@media (hover: none) {
+  .checklist-item:hover,
+  .lesson-card:hover,
+  .reset-button:hover,
+  .export-button:hover {
+    transform: none;
+  }
+}
+
+/* 減少動畫對於偏好無動畫的用戶 */
+@media (prefers-reduced-motion: reduce) {
+  .checklist-item,
+  .lesson-card,
+  .progress-fill,
+  .lesson-progress-fill,
+  .completion-message {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

@@ -12,7 +12,8 @@
     "docs:dev-clean": "vuepress dev docs --clean-cache --clean-temp",
     "docs:build": "vuepress build docs --clean-cache --clean-temp",
     "docs:preview": "http-server docs/.vuepress/dist",
-    "vp-update": "npx vp-update"
+    "vp-update": "npx vp-update",
+    "lint:lessons": "node scripts/check-lessons.mjs"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",

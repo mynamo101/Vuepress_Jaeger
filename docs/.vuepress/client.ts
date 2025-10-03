@@ -7,8 +7,12 @@ import { defineClientConfig } from 'vuepress/client'
 import WaveSurferPlayer from './theme/components/WaveSurferPlayer.vue'
 import VideoWaveform from './theme/components/VideoWaveform.vue'
 import CustomComponent from './theme/components/Custom.vue'
+import VideoEmbed from './components/VideoEmbed.vue'
+import LessonChecklist from './components/LessonChecklist.vue'
+import LessonProgressOverview from './components/LessonProgressOverview.vue'
 
 import './theme/styles/custom.css'
+import './styles/lesson-components.css'
 
 
 export default defineClientConfig({
@@ -23,5 +27,8 @@ export default defineClientConfig({
     // app.component('CustomComponent', CustomComponent)
     app.component('WaveSurferPlayer', WaveSurferPlayer)
     app.component('VideoWaveform', VideoWaveform)
+    app.component('VideoEmbed', VideoEmbed)
+    app.component('LessonChecklist', LessonChecklist)
+    app.component('LessonProgressOverview', LessonProgressOverview)
   },
 })

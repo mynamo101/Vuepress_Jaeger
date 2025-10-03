@@ -41,8 +41,8 @@ export default defineThemeConfig({
   encrypt: {
     rules: {
       '/article/enx7c9s/': '123456',
-      '/article/1zha8bjg/': 'sj2024',
-      '/FMOD/': 'sj2024',
+      // '/article/1zha8bjg/': 'sj2024',
+      // '/FMOD/': 'sj2024',
     },
   },
   autoFrontmatter: { exclude: ['**/*.snippet.*'] },

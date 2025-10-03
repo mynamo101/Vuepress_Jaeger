@@ -8,7 +8,7 @@ export const zhNavbar = defineNavbarConfig([
     items: [
       { text: '基礎知識', link: '/notes/Readme.md', icon: 'wpf:books' },
       { text: 'FMOD', link: '/notes/FMOD/1.開始準備/介紹.md', icon: 'wpf:faq' },
-      // { text: 'Wwise', link: '/notes/Wwise/1.開始準備/介紹.md', icon: 'line-md:coffee-loop' },
+      { text: 'Wwise', link: '/notes/Wwise/1.開始準備/介紹.md', icon: 'line-md:coffee-loop' },
     ],
     activeMatch: '^/(FMOD|Wwise)/',
   },
