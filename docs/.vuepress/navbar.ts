@@ -6,23 +6,18 @@ export const zhNavbar = defineNavbarConfig([
     text: '聲音引擎',
     icon: 'icon-park-outline:guide-board',
     items: [
-      { text: '基礎知識', link: '/notes/Readme.md', icon: 'wpf:books' },
-      { text: 'FMOD', link: '/notes/FMOD/1.開始準備/介紹.md', icon: 'wpf:faq' },
-      { text: 'Wwise', link: '/notes/Wwise/1.開始準備/介紹.md', icon: 'line-md:coffee-loop' },
+      { text: '基礎知識', link: '/guide/', icon: 'wpf:books' },
+      { text: 'FMOD', link: '/guide/FMOD/', icon: 'wpf:faq' },
+      { text: 'Wwise', link: '/guide/Wwise/0.Readme.md', icon: 'line-md:coffee-loop' },
     ],
-    activeMatch: '^/(FMOD|Wwise)/',
+    activeMatch: '^/(guide|基礎知識)/',
   },
   // {
   //   text: '服務說明',
   //   icon: 'icon-park-outline:expand-down',
-  //   link: '/notes/Service/1.關於服務/介紹.md',
+  //   link: '/Service/',
   //   activeMatch: '^/Service/',
   // },
-  {
-    text: '聲音工具',
-    link: '/notes/SoundTools/1.Intro.md',
-    icon: 'map:wind-surfing',
-  },
   {
     text: '博客',
     link: '/blog/',

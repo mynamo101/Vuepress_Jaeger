@@ -14,7 +14,7 @@ export async function prepareConfigFile(app: App, options: MarkdownPowerPluginOp
   const imports = new Set<string>()
   const enhances = new Set<string>()
 
-  imports.add(`import Tabs from '${CLIENT_FOLDER}components/Tabs.vue'`)
+  imports.add(`import Tabs from '${CLIENT_FOLDER}components/ProjectExplorer/Tabs.vue'`)
   enhances.add(`app.component('Tabs', Tabs)`)
 
   imports.add(`import CodeTabs from '${CLIENT_FOLDER}components/CodeTabs.vue'`)

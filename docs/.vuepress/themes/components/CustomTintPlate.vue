@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PlumeThemeHomeHeroTintPlate } from 'vuepress-theme-plume/client'
+import type { ThemeHomeHeroTintPlate } from 'vuepress-theme-plume/client'
 import { computed, watch } from 'vue'
 import InputRange from './InputRange.vue'
 

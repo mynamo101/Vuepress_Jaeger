@@ -12,7 +12,7 @@ import { fileTreePlugin } from './fileTree.js'
 import { langReplPlugin } from './langRepl.js'
 import { npmToPlugins } from './npmTo.js'
 import { stepsPlugin } from './steps.js'
-import { tabs } from './tabs.js'
+import { tabs } from './ProjectExplorer/Tabs.js'
 import { timelinePlugin } from './timeline.js'
 
 export async function containerPlugin(

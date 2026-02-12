@@ -16,7 +16,7 @@ export default defineUserConfig({
   // source: path.resolve(__dirname, '../'),
   // public: path.resolve(__dirname, 'public'),
   locales: {
-    '/': { title: 'Sound Jaeger 官方文檔', lang: 'zh-TW' },
+    '/': { title: 'Sound Jaeger 課程', lang: 'zh-TW' },
     '/en/': { title: 'Sound Jaeger Offcial Documents', lang: 'en-US' },
   },
   

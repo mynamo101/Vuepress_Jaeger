@@ -32,7 +32,7 @@ const tintPlate = computed(() => {
     case 'single':
       return singleTintPlate.value
     case 'triplet':
-      return tripletTintPlate.value.join(',')
+      return tripletTintPlate.value
     case 'custom':
       return customTintPlate.value
     default:

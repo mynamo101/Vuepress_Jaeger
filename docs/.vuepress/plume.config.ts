@@ -1,7 +1,7 @@
 import path from 'node:path'
 import plumeTheme, { defineThemeConfig } from 'vuepress-theme-plume'
 import { enNavbar, zhNavbar } from './navbar.js'
-import { enNotes, zhNotes } from './notes/index.js'
+import { zhCollections, enCollections } from './collections/index.js'
 
 export default defineThemeConfig({
   logo: '/Images/logo.svg',
@@ -14,10 +14,6 @@ export default defineThemeConfig({
     organization: '聲岳設計',
   },
 
-  blog: {
-    include: ['blog/**/*.md'],
-  },
-  
   social: [
     { icon: 'instagram', link: 'https://www.instagram.com/ming_dejapupu/' },
   ],
@@ -30,11 +26,11 @@ export default defineThemeConfig({
 
   locales: {
     '/': {
-      notes: zhNotes,
+      collections: zhCollections,
       navbar: zhNavbar,
     },
     '/en/': {
-      notes: enNotes,
+      collections: enCollections,
       navbar: enNavbar,
     },
   },
@@ -45,7 +41,6 @@ export default defineThemeConfig({
       // '/FMOD/': 'sj2024',
     },
   },
-  autoFrontmatter: { exclude: ['**/*.snippet.*'] },
   
   bulletin: {
     layout: 'bottom-right',

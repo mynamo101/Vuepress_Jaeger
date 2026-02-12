@@ -10,21 +10,28 @@ export const theme: Theme = plumeTheme({
   changelog: { maxCount: 10 },
   contributors: { mode: 'block' },
 
+  markdown: {
+    table: {
+      align: 'left',
+      maxContent: false,
+      copy: true,
+      fullWidth: true,
+    },
+    chartjs: true,
+    mermaid: true,
+    flowchart: true,
+    field: true,
+    codeTree: true,
+    fileTree: {
+      icon: 'simple' // 'simple' | 'colored'
+    }
+  },
+
   plugins: {
 
     shiki: {
       twoslash: true,
       lineNumbers: 10,
-    },
-
-    markdownEnhance: {
-      demo: true,
-      chartjs: true,
-      echarts: true,
-      markmap: true,
-      plantuml: true,
-      mermaid: true,
-      flowchart: true,
     },
     markdownPower: {
       chat:true,

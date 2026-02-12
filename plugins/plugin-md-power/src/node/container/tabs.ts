@@ -22,7 +22,7 @@ ${titles.map((title, titleIndex) =>
 ).join('')}`
     },
 
-    tabsCloseRenderer: () => `</Tabs>`,
+    tabsCloseRenderer: () => `</ProjectExplorer/Tabs>`,
 
     tabOpenRenderer: ({ index }) =>
       `<template #tab${index}="{ value, isActive }">`,

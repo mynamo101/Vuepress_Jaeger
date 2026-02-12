@@ -1,15 +1,15 @@
 ---
 title: WaveSurferPlayer 讓你的聲波動起來
 createTime: 2025/04/03 19:19:04
-permalink: /article/g6ebyl5g/
-tags: 
- - 聲音
- - Vue
- - 插件
+tags:
+  - 聲音
+  - Vue
+  - 插件
 cover: /Images/Blog/20250405011121.png
 coverStyle:
- layout: left
- ratio: .6
+  layout: left
+  ratio: 0.6
+permalink: /blog/9j67mvir/
 ---
 
 ## **WaveSurferPlayer**
